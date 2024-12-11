@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH --job-name=VAE            # Job name
+#SBATCH --output=vae.txt   # Standard output and error log
+#SBATCH --cpus-per-task=16          # Number of CPU cores
+#SBATCH --gres=gpu:2               # Number of GPUs (per node)
+
+hostname
+python vae_cond.py
